@@ -61,8 +61,8 @@ const updateItem = (request, response)=>{
         if(error){
             throw error
         }
-        console.log(results.rows)
-        response.status(200).send(`Item modified with ID: ${results.rows.id}`)
+        console.log(results)
+        response.status(200).send(`Item modified with ID: ${id}`)
     });
 }
 
@@ -73,7 +73,7 @@ const DeleteItem = (request, response) =>{
         if(error){
             throw error
         }
-        console.log(results.rows)
+          console.log(results.rows)
     })
     response.status(200).send(`User deleted with ID: ${id}`)
 }

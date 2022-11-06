@@ -30,5 +30,5 @@ app.listen(port, ()=>{
 app.get('/items', db.getItems)
 app.get('/items/:id', db.getItemById)
 app.post('/items', db.createItem);
-app.put('/items', db.updateItem);
-app.delete('/items', db.DeleteItem);
+app.put('/items/:id', db.updateItem);
+app.delete('/items/:id', db.DeleteItem);
