@@ -1,0 +1,23 @@
+.display_wrapper{
+    width: 90%;
+    max-width:100%;
+    background-color:  #00ABE1;
+    height: 50vh;
+    margin: auto;
+    margin-top: 15px;
+    border-bottom-left-radius: 41px;
+    border-bottom-right-radius: 41px;
+    border-top-right-radius: 41px;
+}
+.display_wrapper_inner {
+    width: 80%;
+    max-width:100%;
+    background-color:  white;
+    height: 45vh;
+    margin: auto;
+    border-bottom-left-radius: 41px;
+    border-bottom-right-radius: 41px;
+    border-top-right-radius: 41px;
+    position: relative;
+    top: 20px;
+}
