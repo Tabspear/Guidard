@@ -1,0 +1,25 @@
+.btn{
+   display:flex;
+   align-items: center;
+    text-align: center;
+    padding: 10px;
+    width:40vw;
+    max-width: 40%;
+    border-radius: 10px;
+    border-color: #161F6D;
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+
+
+.proBtn {
+    background:#00ABE1;
+    color: #161F6D(236, 72%, 79%);
+    margin-right: 10px;
+    border-bottom-left-radius: 41px;
+    border-bottom-right-radius: 41px;
+    border-top-right-radius: 41px;
+    height: 6vh;
+    font-size: 15px;
+}
