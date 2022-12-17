@@ -1,32 +1,33 @@
-import React,{useState} from 'react'
 import "./Search.css"
 import Button from "./Button";
-const Search = ()=>{
-    const [value, setValue] = useState();
 
+
+const Search = (props)=>{
+    
+
+    const handleSearch = (event)=>{
+        props.OnInputValue(event.target.value)
+    }
     return(
         
-        <div className="search_wrapper">
-        {console.log(value)}
+        <form className="search_wrapper">
         <div className = "search">
             <h3>Locate</h3>
             <input placeholder = "Type Name of Item"
              type = "text"
-             value = {value || ''}
              required ="required" 
              id= "search-item"
-             onChange = {(event)=>setValue(event.target.value)}
+             onChange = {handleSearch}
              />
-            
         </div>
       
         <div className="btn">
-        <Button name = "Search"/>
-        <Button name = "Clear"/>
+        <Button type= 'submit' name = "Search" onClick = {props.onSubmit}/>
+        <Button type= 'submit' name = "Clear"/>
         </div>
        
        
-        </div>
+        </form>
     )
 }
 
