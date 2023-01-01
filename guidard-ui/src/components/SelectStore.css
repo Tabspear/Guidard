@@ -1,0 +1,9 @@
+.selectStore_wrapper{
+    background-color: white;
+    max-width: 40vw;
+    max-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
