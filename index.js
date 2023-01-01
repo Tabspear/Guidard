@@ -1,8 +1,9 @@
 //SERVER ENTRY POINT
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const app = express();
-const port = 3000;
+const port = 3002;
 const db = require('./queries')
 
 app.use(bodyParser.json());
@@ -11,6 +12,11 @@ app.use(
         extended:true,
     })
 )
+app.use(cors({
+ port: ['http://localhost:3002'],
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}))
 
 
 //Routes 
@@ -29,6 +35,7 @@ app.listen(port, ()=>{
  
 app.get('/items', db.getItems)
 app.get('/items/:id', db.getItemById)
+app.post('/items/:name', db.getItemByName)
 app.post('/items', db.createItem);
 app.put('/items/:id', db.updateItem);
 app.delete('/items/:id', db.DeleteItem);

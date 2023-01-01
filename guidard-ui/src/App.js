@@ -15,11 +15,9 @@ const App = (props) => {
 
   const handleSubmit = (event) => {
    event.preventDefault()
-   console.log('here')
-   console.log(value)
    axios
    .post(`${baseUrl}${value}`, {})
-   .then((response) => console.log( response, setResult(response.data)))
+   .then((response) =>  setResult(response.data))
    .catch((error) => console.log(error));   
   }
 
