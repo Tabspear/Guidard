@@ -7,3 +7,21 @@
     flex-direction: column;
     z-index: 100;
 }
+.select_locations {
+ margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 480px) {
+    .selectStore_wrapper{
+        max-width: 50vw; 
+    }
+     
+    }
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+    .selectStore_wrapper{
+        max-width: 70vw; 
+    }
+        
+      }

@@ -20,7 +20,7 @@ const SelectStore = () => {
          />
         </div>
          
-         <div>
+         <div className='select_locations '>
          <select value = {location} onChange = {e=> setLocation(e.target.value)}>
             <option>Select Store Location</option>
             <option value = "">Current Location</option>
