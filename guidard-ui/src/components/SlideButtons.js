@@ -3,6 +3,7 @@ import Hardware from "../img/jelleke-vanooteghem-Hardware-unsplash.jpg";
 import Grocery from "../img/Grocery.jpg";
 import Beauty from "../img/Beauty.jpg";
 import Slide from "./Slide";
+import "./Slider.css";
 const images = [
   {
     id: 0,
@@ -31,12 +32,18 @@ const SlideButtons = () => {
   };
 
   const handleImageRightChange = () => {
-    setSlide((prevState) => prevState + 1);
-    console.log("Happy");
+    if (slide !== images.length) {
+      setSlide((prevState) => prevState + 1);
+    } else if (slide === images.length) {
+      setSlide((prevState) => (prevState = 0));
+    }
   };
   const handleImageLeftChange = () => {
-    setSlide((prevState) => prevState - 1);
-    console.log("Joyful");
+    if (slide !== 0) {
+      setSlide((prevState) => prevState - 1);
+    } else if (slide === images.length) {
+      setSlide(images.length);
+    }
   };
 
   return (
@@ -52,10 +59,10 @@ const SlideButtons = () => {
         );
       })}
 
-      <div>
+      <div className="svgWrapper">
         <svg
-          width="24"
-          height="24"
+          width="50"
+          height="51"
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -116,8 +123,8 @@ const SlideButtons = () => {
         <span onClick={handleClick}>
           {show ? (
             <svg
-              width="24"
-              height="24"
+              width="50"
+              height="51"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -139,8 +146,8 @@ const SlideButtons = () => {
             </svg>
           ) : (
             <svg
-              width="24"
-              height="24"
+              width="50"
+              height="51"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -169,8 +176,8 @@ const SlideButtons = () => {
         </span>
 
         <svg
-          width="24"
-          height="24"
+          width="50"
+          height="51"
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
