@@ -1,24 +1,17 @@
-import React from 'react'
-import "./Slider.css"
+import React from "react";
+import "./Slider.css";
 
-const Slide = ({itemImage, itemTitle, style})=> {
-    return (
+const Slide = ({ itemImage, itemTitle, style }) => {
+  return (
+    <div style={style} className="slider">
+      <div>
+        <h1 className="textResponsive">{itemTitle}</h1>
+      </div>
+      <div>
+        <img src={itemImage} alt={itemTitle} className="slider active" />
+      </div>
+    </div>
+  );
+};
 
-        <div style={style}>
-          <div>
-            <h1>{itemTitle}</h1>
-          </div>
-          <div>
-            <img
-              src={itemImage}
-              alt={itemTitle}
-              className="responsive "
-            />
-          </div>
-      
-        </div>
-       
-     )
-}
-
-export default Slide
+export default Slide;
