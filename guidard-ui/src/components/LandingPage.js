@@ -10,11 +10,11 @@ const LandingPage = ()=>{
     return (
         <div className = "page_wrapper">
             <div className = "landingPage_container">
-                <div>
+                <div className='item_A'>
                     <h4 className = "land_page_title">START SHOPPING FROM HOME</h4>
                     <p className = "land_page_subtitle">Track items on the shelve and cut time spent in the store by 70%</p>
                 </div>
-                <div>
+                <div className='item_B'>
                 <SelectStore/>
                 </div>
             </div>
