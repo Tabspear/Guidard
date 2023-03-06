@@ -8,6 +8,8 @@
   overflow: hidden;
   padding: 20px;
   margin: auto;
+  border-radius: 20px;
+  box-shadow: 2px 2px white;
 }
 
 .slide {
@@ -17,9 +19,8 @@
   max-inline-size: 100%;
   block-size: auto;
   object-fit: contain;
-  border-radius: 10px;
   opacity: 0;
-  animation: slideX 4s alternate ease-in-out;
+  animation: slideX 4s alternate ease;
 }
 
 .slide.active {
@@ -36,6 +37,9 @@
 }
 .svgWrapper {
   display: flex;
-  place-items: center;
-  gap: 10px;
+  justify-content: center;
+}
+
+svg {
+  margin: 10px;
 }

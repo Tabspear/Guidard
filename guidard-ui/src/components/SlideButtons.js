@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Hardware from "../img/jelleke-vanooteghem-Hardware-unsplash.jpg";
 import Grocery from "../img/Grocery.jpg";
 import Beauty from "../img/Beauty.jpg";
@@ -23,16 +23,28 @@ const images = [
 ];
 
 const SlideButtons = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const [slide, setSlide] = useState(0);
+
+  useEffect(() => {
+    let interVal;
+    if (show) {
+      interVal = setInterval(() => {
+        setSlide((prevState) =>
+          prevState === images.length - 1 ? 0 : prevState + 1
+        );
+      }, 5000);
+    }
+
+    return () => clearInterval(interVal, handleClick);
+  });
 
   const handleClick = () => {
     setShow((prevState) => !prevState);
-    setSlide((prevState) => prevState + 1);
   };
 
   const handleImageRightChange = () => {
-    if (slide !== images.length) {
+    if (slide !== images.length - 1) {
       setSlide((prevState) => prevState + 1);
     } else if (slide === images.length) {
       setSlide((prevState) => (prevState = 0));
