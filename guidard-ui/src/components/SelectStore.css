@@ -13,7 +13,7 @@
 }
 .select_option {
   width: 40vw;
-  max-height: 10vh;
+  height: 50px;
 }
 @media only screen and (max-width: 480px) {
   .selectStore_wrapper {
